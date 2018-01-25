@@ -1,0 +1,98 @@
+<div class="row-col"  ng-controller="ModalCtl">
+    <div class="col-sm w-lg w-auto-xs light lt">
+		<div class="p-a">
+			<div>部门管理</div>
+			<ul tree class="ztree" ng-model="selectNode" id="tree"></ul>
+		</div>
+    </div>
+    <div class="col-sm" >
+		<div class="p-a">
+			<div class="box">
+				<div class="p-a row">
+					<div class="col-md-8">
+						<div class="btn-groups">
+							<button class="btn info btn-sm" ng-click="open(id)">添加</button>
+							<button class="btn white btn-sm" ng-click="update()">修改</button>
+							<button class="btn white btn-sm" ng-click="delete(info)">删除</button>
+							<button class="btn white btn-sm" ng-click="refresh()">刷新</button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control" ng-model="searchval" placeholder="搜索">
+						<button class="btn info btn-sm" ng-click="search()">搜索</button>
+					</div>
+				</div>
+				<div class="box-header fade-in-up" ng-if="info">
+				  <h2 data-id="{{id}}">{{title}}</h2>
+				</div>
+				<div class="table-responsive fade-in-up" ng-if="info">
+				  <table class="table table-striped b-t b-b">
+					<thead>
+						<tr>
+							<th>
+								<label class="ui-check">
+									<input type="checkbox" value="" name="checkall">
+									<i class="dark-white"></i>
+								</label>
+							</th>
+							<th>编号</th>
+							<th>id</th>
+							<th>名字</th>
+							<th>所属</th>
+							<th>创建时间</th>
+							<th>电话</th>
+							<th>城市</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in info">
+							<td>
+								<label class="ui-check">
+									<input type="checkbox" name="treecheck" ng-model="treecheck" ng-click="checkNode(treecheck,item.id)">
+									<i class="dark-white"></i>
+								</label>
+							</td>
+							<td>{{$index+1}}</td>
+							<td>{{item.id}}</td>
+							<td>{{item.name}}</td>
+							<td>{{item.ptitle}}</td>
+							<td>{{item.creattime}}</td>
+							<td>{{item.iphone}}</td>
+							<td>{{item.city}}</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr ng-controller="departpageCtrl">
+							<td colspan="11">
+								<div class="row">
+									<div class="col-md-6" style="line-height:40px;">
+										第 {{bigCurrentPage}} / {{numPages}} 页  每页{{pagesize}}条　共计 {{bigTotalItems}} 条
+									</div>
+									<div class="col-md-6">
+										<uib-pagination 
+											previous-text="上一页" 
+											next-text="下一页" 
+											first-text="首页" 
+											last-text="尾页" 
+											total-items="bigTotalItems" 
+											max-size="3" 
+											boundary-links="true" 
+											rotate="false" 
+											num-pages="numPages" 
+											items-per-page="pagesize"
+											ng-model="bigCurrentPage" 
+											class="pagination-sm m-t-none" 
+											style="margin:0;float:right;" 
+											ng-change="pageChanged(bigCurrentPage)">
+										</uib-pagination>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				  </table>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>

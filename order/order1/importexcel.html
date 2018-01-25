@@ -1,0 +1,35 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title">订单导入</h6>
+</div>
+<div class="modal-body">
+	<div class="form-group row">
+	  <label class="col-sm-2 form-control-label">订单信息</label>
+	  <div class="col-sm-6">
+		<input type="file" name="" id="" file-model = "myorderinfoFile"/>
+	  </div>
+	  <div class="col-sm-4">
+		<a href="" class="text-info">订单主表模板下载</a>
+	  </div>
+	</div>
+	<div class="form-group row">
+	  <label class="col-sm-2 form-control-label">订单明细</label>
+	  <div class="col-sm-6">
+		<input type="file" name="" id="" file-model = "myorderdetailFile"/>
+	  </div>
+	  <div class="col-sm-4">
+		<a href="" class="text-info">订单明细模板下载</a>
+	  </div>
+	</div>
+	<h6><b>注意事项</b></h6>
+	<div>1、文件格式必须与导入模板格式一致，并两个表必须一起导入；</div>
+	<div>2、同一订单，主表和明细表的订单编码必须相同；</div>
+	<div>3、订单状态值允许填：【外部系统已完成】和【买家已付款，等待卖家发货】( 状态为【外部系统已完成】时导入的订单为已发货的状态；状态为【买家已付款，等待卖家发货】时导入的订单为未审核状态 )；</div>
+	<div>4、订单明细表的【规格名称】允许填写规格名称或规格代码，系统优先按规格名称进行解析，解析不成功，再按规格代码解析；</div>
+	<div>5、订单明细表的【购买数量】必须是数值格式，否则导入失败；</div>
+	<div>6、导入后稍等片刻，导入进度请在右上角【常用页面 - 任务中心】查看；</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+	<button type="submit" class="btn danger p-x-md" ng-click="confirm_importorder()">确定</button>
+</div>

@@ -1,0 +1,37 @@
+[
+    {
+        "id": "55654516",
+        "code": "Sales",
+        "name": "销售订单",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "55654770",
+        "code": "Return",
+        "name": "换货订单",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "55654771",
+        "code": "Charge",
+        "name": "费用订单",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "55654957",
+        "code": "Delivery",
+        "name": "补发货订单",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "55655074",
+        "code": "Invoice",
+        "name": "补发票订单",
+        "del": false,
+        "note": ""
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "total": 45,
+    "currentPage": 1,
+    "numPerPage": 10,
+    "rows": [
+        {
+            "id": 1,
+            "code" : "010",
+            "name" : "供应商1",
+            "color" : "#ff3000",
+            "status" : 1
+        },
+        {
+            "id": 2,
+            "code" : "410",
+            "name" : "供应商2",
+            "color" : "#1012ff",
+            "status" : 0
+        }
+    ]
+}

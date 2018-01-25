@@ -1,0 +1,432 @@
+<form  class="form-validation" style="margin:30px auto 0;width:1000px;padding-bottom:30px;">
+	<h6 class="m-b"><b>企业基本信息</b> (注 ： 带*号为必填项，请根据真实信息认真填写！)</h6>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right">企业注册名称(全)</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.fullName" placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>企业注册名称(简)</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.regCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>企业英文名称</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.enFullCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>组织机构代码</label>
+				<div class="col-md-8">
+					<input class="form-control" type="number" ng-model="company.copGgCode" required placeholder="请输入..." ng-pattern="/^[0-9]+$/">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>企业中文地址</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.addrCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>企业英文地址</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.enAddrCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>营业执照号</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.licenseId" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right" style=" padding-left: 0;padding-right: 0;"><span class="text-danger">*</span>收款帐户开户银行</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.accoBank" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>收款帐号</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.accoNo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>企业邮编</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.mailCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>注册日期</label>
+				<div class="col-md-8">
+					<input class="Wdate form-control" type="text" ng-model="company.rgDate" datefmt = "yyyy-MM-dd HH:mm:ss" wdatepicker required>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>年审日期</label>
+				<div class="col-md-8">
+					<input class="Wdate form-control" type="text" ng-model="company.chkDate" datefmt = "yyyy-MM-dd HH:mm:ss" wdatepicker required>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>联系人</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.contacCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>联系电话</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.telCo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>法人代表</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.lawMan" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>法人电话</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.lawManTel" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>注册资本(万)</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.rgFund" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>注册基金币制</label>
+				<div class="col-md-8">
+					<select class="form-control" ng-model="company.currCode" ng-options="y.value as y.text for y in currCode_arr" required>
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>税务登记号</label>
+				<div class="col-md-8">
+					<input class="form-control" type="number" ng-model="company.taxyRgNo" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right">居留证号码</label>
+				<div class="col-md-8">
+					<input class="form-control" type="number" ng-model="company.idNumber" placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>报关类别</label>
+				<div class="col-md-8">
+					<select class="form-control" ng-model="company.brokerType" ng-options="y.value as y.text for y in brokerType_arr" required>
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right">行业种类</label>
+				<div class="col-md-8">
+					<select class="form-control" ng-model="company.busiType" ng-options="y.value as y.text for y in busiType_arr">
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right">批准机关</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.apprDep" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right">批准文号</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.apprId" placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-3 form-control-label text-right"><span class="text-danger">*</span>企业经营范围</label>
+				<div class="col-md-9">
+					<input class="form-control" type="text" ng-model="company.copRange" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group row">
+				<label class="col-md-3 form-control-label text-right">备注</label>
+				<div class="col-md-9">
+					<input class="form-control" type="text" ng-model="company.copNote" placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<h6 class="m-b"><b>法人信息</b> (注 ： 带*号为必填项，请根据真实信息认真填写！)</h6>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>姓名</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.managerName" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>职务</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.managerTitle" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>国籍</label>
+				<div class="col-md-8">
+					<select class="form-control" ng-model="company.managerNation" ng-options="y.value as y.text for y in managerNation_arr" required>
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>证件类型</label>
+				<div class="col-md-4">
+					<select class="form-control" ng-model="company.managerIdType" ng-options="y.value as y.text for y in managerIdType_arr" required>
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+				<div class="col-md-4">
+					<input class="form-control" type="text" ng-model="company.managerId" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>出生日期</label>
+				<div class="col-md-8">
+					<input class="Wdate form-control" type="text" ng-model="company.managerBirthday" datefmt = "yyyy-MM-dd" wdatepicker required maxdate="%y-%M-%d">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>性别</label>
+				<div class="col-md-8">
+					<select class="form-control" ng-model="company.managerGender" ng-options="y.value as y.text for y in managerGender_arr" required>
+						<option value="">---请选择---</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>住址</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.managerAddress" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>联系电话BP</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.managerTelphone" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>学历</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.managerDegree" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<h6 class="m-b"><b>企业相关证件信息</b> (说明：以下附件格式限定为：JPG常规主流图片格式，并且附件大小限定在500k以下)</h6>
+	<div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="box b-info b-a p-a">
+					<div class="p-b"><span class="text-danger">*</span>上传企业营业执照
+						<a href="javascript:void(0);" class="pull-right text-info" ng-click="showExampleImg('assets/images/exampleimg.jpg')">样例预览</a>
+					</div>
+					<input type="file" file-model = "company.licenseImage" required/>
+					<div class="p-t"><img ng-src="{{license_image}}"/></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="box b-info b-a p-a">
+					<div class="p-b"><span class="text-danger">*</span>上传税务登记证
+						<a href="javascript:void(0);" class="pull-right text-info" ng-click="showExampleImg('assets/images/exampleimg.jpg')">样例预览</a>
+					</div>
+					<input type="file" file-model = "company.taxyRgNoImage" required/>
+					<div class="p-t"><img ng-src="{{taxyRgNo_image}}"/></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="box b-info b-a p-a">
+					<div class="p-b"><span class="text-danger">*</span>上传企业组织机构代码证
+						<a href="javascript:void(0);" class="pull-right text-info" ng-click="showExampleImg('assets/images/exampleimg.jpg')">样例预览</a>
+					</div>
+					<input type="file" file-model = "company.copGgCodeImage" required/>
+					<div class="p-t"><img ng-src="{{copGgCode_image}}"/></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="box b-info b-a p-a">
+					<div class="p-b"><span class="text-danger">*</span>上传银行账号、开户行、开户证明
+						<a href="javascript:void(0);" class="pull-right text-info" ng-click="showExampleImg('assets/images/exampleimg.jpg')">样例预览</a>
+					</div>
+					<input type="file" file-model = "company.accoBankImage" required/>
+					<div class="p-t"><img ng-src="{{accoBank_image}}"/></div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="box b-info b-a p-a">
+					<div class="p-b"><span class="text-danger">*</span>上传企业法人身份证或相关身份证明扫描件（双面）
+						<a href="javascript:void(0);" class="pull-right text-info" ng-click="showExampleImg('assets/images/exampleimg.jpg')">样例预览</a>
+					</div>
+					<input type="file" file-model = "company.lawManIdImage" required/>
+					<div class="p-t"><img ng-src="{{lawManId_image}}"/></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<h6 class="m-b"><b>平台用户信息</b> (说明 ：以下用户信息作为上海市跨境电子商务进口服务平台登录帐号，请认真填写并记住密码)</h6>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>登陆用户名</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" ng-model="company.loginName" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>密码</label>
+				<div class="col-md-8">
+					<input class="form-control" type="password" ng-model="company.password" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>再次输入密码</label>
+				<div class="col-md-8">
+					<input class="form-control" type="password" ng-model="company.passwordAgain" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group row">
+				<label class="col-md-4 form-control-label text-right"><span class="text-danger">*</span>邮箱</label>
+				<div class="col-md-8">
+					<input class="form-control" type="email" ng-model="company.email" required placeholder="请输入...">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="form-group row">
+				<label class="col-md-2 form-control-label text-right">说明</label>
+				<div class="col-md-10">
+					<p class="form-control-static">
+						该邮箱为企业注册成功后，上海市跨境电子商务进口服务平台订单支付正式环境接入信息接收邮箱
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-10">
+			<button class="btn info" ng-click="registerToStep3(company)">下一步</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,202 @@
+[
+    {
+        "id": "-9999",
+        "tenantId": null,
+        "code": null,
+        "name": "全部",
+        "del": false,
+        "note": null,
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "-9998",
+        "tenantId": null,
+        "code": null,
+        "name": "默认类别",
+        "del": false,
+        "note": null,
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "1045502810",
+        "tenantId": null,
+        "code": "121",
+        "name": "12",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "1045448142",
+        "tenantId": null,
+        "code": "新分类3",
+        "name": "3",
+        "del": false,
+        "note": "",
+        "pid": "1045448140",
+        "state": null
+    },
+    {
+        "id": "1045448141",
+        "tenantId": null,
+        "code": "新分类2",
+        "name": "2",
+        "del": false,
+        "note": "",
+        "pid": "1045447138",
+        "state": null
+    },
+    {
+        "id": "1045448140",
+        "tenantId": null,
+        "code": "新分类1",
+        "name": "1",
+        "del": false,
+        "note": "",
+        "pid": "1045447138",
+        "state": null
+    },
+    {
+        "id": "1045447138",
+        "tenantId": null,
+        "code": "新分类",
+        "name": "测试002",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "1028262475",
+        "tenantId": null,
+        "code": "0113",
+        "name": "六神宝宝",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "1021998111",
+        "tenantId": null,
+        "code": "箱包",
+        "name": "箱包",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "994192823",
+        "tenantId": null,
+        "code": "床上四件套",
+        "name": "床上四件套",
+        "del": false,
+        "note": "",
+        "pid": "994192822",
+        "state": null
+    },
+    {
+        "id": "994192822",
+        "tenantId": null,
+        "code": "生活",
+        "name": "生活",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "989921190",
+        "tenantId": null,
+        "code": "123",
+        "name": "123",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "989921068",
+        "tenantId": null,
+        "code": "111",
+        "name": "111",
+        "del": false,
+        "note": "",
+        "pid": "989921013",
+        "state": null
+    },
+    {
+        "id": "989921013",
+        "tenantId": null,
+        "code": "456",
+        "name": "456",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "986228263",
+        "tenantId": null,
+        "code": "molihua",
+        "name": "茉莉花",
+        "del": false,
+        "note": "",
+        "pid": "986228244",
+        "state": null
+    },
+    {
+        "id": "986228261",
+        "tenantId": null,
+        "code": "满江红",
+        "name": "满江红",
+        "del": false,
+        "note": "",
+        "pid": "986228244",
+        "state": null
+    },
+    {
+        "id": "986228244",
+        "tenantId": null,
+        "code": "莫高古筝",
+        "name": "莫高古筝",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "985946366",
+        "tenantId": null,
+        "code": "ptsp",
+        "name": "普通商品",
+        "del": false,
+        "note": "",
+        "pid": "985946365",
+        "state": null
+    },
+    {
+        "id": "985946365",
+        "tenantId": null,
+        "code": "zycs",
+        "name": "朱莹测试专用",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    },
+    {
+        "id": "980324865",
+        "tenantId": null,
+        "code": "测试001",
+        "name": "测试001",
+        "del": false,
+        "note": "",
+        "pid": null,
+        "state": null
+    }
+]

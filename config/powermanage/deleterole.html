@@ -1,0 +1,18 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title">删除角色</h6>
+  </div>
+   <form class="form-validation">
+	  <div class="modal-body">
+		<div ng-if="!currentnode.leaf">
+			删除【{{currentnode.text}}】，其下所有角色数据均会被删除，你确定删除吗？
+		</div>
+		<div ng-if="currentnode.leaf">
+			你确定删除【{{currentnode.text}}】角色数据吗？
+		</div>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn dark-white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+		<button type="submit" class="btn danger p-x-md" ng-click="savedeleterole(currentnode,modaltype)">确定</button>
+	  </div>
+</form>

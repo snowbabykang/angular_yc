@@ -1,0 +1,114 @@
+<div class="row-col">
+    <div class="col-sm w-lg w-auto-xs light lt">
+		<div class="p-a">
+			<div>员工管理</div>
+			<ul stafftree class="ztree" ng-model="selectNode" id="stafftree"></ul>
+		</div>
+    </div>
+    <div class="col-sm" >
+		<div class="p-a">
+			<div class="box"  ng-controller="staffMainCtl">
+				<div class="p-a row">
+					<div class="col-md-8">
+						<div class="btn-groups">
+							<button class="btn info btn-sm" ng-click="open(id)">添加</button>
+							<button class="btn white btn-sm" ng-click="update()">修改</button>
+							<button class="btn white btn-sm" ng-click="delete()">删除</button>
+							<!-- <button class="btn white btn-sm">刷新</button> -->
+						</div>
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control" placeholder="搜索">
+					</div>
+				</div>
+				<div class="box-header fade-in-up" ng-if="stafflist">
+				  <h2 data-id="{{id}}">{{title}}下的员工：</h2>
+				</div>
+				<div class="table-responsive fade-in-up" ng-if="stafflist">
+				  <table class="table table-striped b-t b-b">
+					<thead>
+						<tr>
+							<th>
+								<label class="ui-check">
+									<input type="checkbox" value="" name="checkall">
+									<i class="dark-white"></i>
+								</label>
+							</th>
+							<th>编号</th>
+							<th>id</th>
+							<th>名字</th>
+							<th>所属</th>
+							<th>性别</th>
+							<th>电话</th>
+							<th>出生日期</th>
+						</tr>
+					</thead>
+					<tbody ng-repeat="opt in stafflist track by $index">
+						<tr>
+							<td colspan="8">
+								<span ng-bind="opt.depart.name"></span>
+							</td>
+						</tr>
+						<tr ng-if="!opt.staff">
+							<td colspan="8">
+								<div class="p-a text-center animated fadeInUp">
+									<span class="text-3x">
+									  <i class="fa fa-exclamation-circle text-warn"></i>
+									</span>
+									<h5 class="_300 text-muted">
+									   暂时没有数据
+									</h5>
+								</div>
+							</td>
+						</tr>
+						<tr ng-repeat="item in opt.staff track by $index" ng-if="opt.staff">
+							<td>
+								<label class="ui-check">
+									<input type="checkbox" name="staffcheck" ng-model="staffcheck" ng-click="checkNode(staffcheck,item.id)">
+									<i class="dark-white"></i>
+								</label>
+							</td>
+							<td>{{$index+1}}</td>
+							<td>{{item.id}}</td>
+							<td>{{item.name}}</td>
+							<td pid = "{{item.pid}}">{{item.pname}}</td>
+							<td>{{item.sex}}</td>
+							<td>{{item.iphone}}</td>
+							<td>{{item.birth}}</td>
+						</tr>
+					</tbody>
+					<tfooter ng-if="opt.staff">
+						<tr>
+							<td colspan="8" class="row">
+								<div class="col-sm-6" style="line-height:40px;">
+									当前第 1 - 10 条　共计 57 条
+								</div>
+								<div class="col-sm-6">
+									<ul class="pagination" style="margin:0;float:right;">
+										<li class="paginate_button first disabled"><a href="#">首页</a></li>
+										<li class="paginate_button previous disabled"><a href="#">前一页</a></li>
+										<li class="paginate_button active"><a href="#">1</a></li>
+										<li class="paginate_button "><a href="#">2</a></li>
+										<li class="paginate_button next"><a href="#">后一页</a></li>
+										<li class="paginate_button last"><a href="#">尾页</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</tfooter>
+				  </table>
+				</div>
+				<div ng-if = "!stafflist">
+					<div class="p-a-lg text-center animated fadeInUp">
+						<span class="text-3x">
+						  <i class="fa fa-exclamation-circle text-2x text-warn"></i>
+						</span>
+						<h4 class="_300 text-muted">
+						   暂时没有数据
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>

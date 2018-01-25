@@ -1,0 +1,46 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title" ng-if="orderpaytype == 'add'">新增订单支付明细</h6>
+	<h6 class="modal-title" ng-if="orderpaytype == 'edit'">编辑订单支付明细</h6>
+</div>
+<form class="form-validation" name="payform">
+	<div class="modal-body">
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">支付方式</label>
+		  <div class="col-sm-10">
+			<select class="form-control" ng-model="orderpaydata.type" ng-options="y.id as y.name for y in paytype_arr" required>
+				<option value="">---请选择---</option>
+			</select>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">支付金额</label>
+		  <div class="col-sm-10">
+			<input type="text" name="price" class="form-control" ng-model="orderpaydata.price" required placeholder="请输入支付金额" ng-pattern="/^\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?$/">
+			<div ng-show="payform.price.$error.pattern" class="form-control-static text-danger">支付金额必须是数字</div>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">支付时间</label>
+		  <div class="col-sm-10">
+			<input class="Wdate form-control" type="text" ng-model="orderpaydata.time" datefmt = "yyyy-MM-dd HH:mm:ss" wdatepicker required>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">交易号</label>
+		  <div class="col-sm-10">
+			<input type="number" class="form-control" ng-model="orderpaydata.payid" required placeholder="请输入交易号">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">账号</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderpaydata.userid" required placeholder="请输入账号">
+		  </div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+		<button type="submit" class="btn danger p-x-md" ng-click="saveOrderPaydata(orderpaydata,orderpaytype)">保存</button>
+	</div>
+</form>

@@ -1,0 +1,99 @@
+<form class="form-validation">
+	<div class="p-t">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>收货人</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.receiverName" required>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">固定电话</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.receiverPhoneBlur">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">手机号码</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.receiverMobileBlur">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">邮政编码</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.receiverZip">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group row">
+					<label class="col-sm-1 form-control-label text-right">地址信息</label>
+					<div class="col-sm-3">
+						<select class="form-control" ng-model="orderaddrlist.countryId" ng-options="y.name for y in addrlist">
+							<option value="">-- 请选择省份 --</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select class="form-control" ng-model="orderaddrlist.cityId" ng-options="y.name for y in orderaddrlist.countryId.cityList">
+							<option value="">-- 请选择城市 --</option>
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select class="form-control" ng-model="orderaddrlist.townId" ng-options="y for y in orderaddrlist.cityId.areaList">
+							<option value="">-- 请选择县区 --</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group row">
+					<label class="col-sm-1 form-control-label text-right"><span class="text-danger">*</span>收货地址</label>
+					<div class="col-sm-11">
+						<input type="text" class="form-control" ng-model="orderaddrlist.receiverAddress" required>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>真实姓名</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.vipRealName" required>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">身份证号</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderaddrlist.vipIdCard">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">电子邮箱</label>
+					<div class="col-sm-8">
+						<input type="email" class="form-control" ng-model="orderaddrlist.vipEmail">
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="btn-groups p-t" style="text-align:center;">
+		<button class="btn info m-l" ng-click="save_editborderinfo(orderaddrlist)">保存</button>
+	</div>
+</form>

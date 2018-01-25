@@ -1,0 +1,50 @@
+<div class="padding">
+<div class="box">
+    <div class="box-header">
+      <h2>数据权限管理</h2>
+    </div>
+    <div class="table-responsive">
+      <table ui-jp="dataTable" ui-options="{
+          sAjaxSource: 'assets/js/data/datatable.json',
+          aoColumns: [
+            { mData: 'engine' },
+            { mData: 'browser' },
+            { mData: 'platform' },
+            { mData: 'version' },
+            { mData: 'grade' }
+          ],
+			bLengthChange: false, 
+			bFilter: false, 
+			bSort: false, 
+			sPaginationType : 'full_numbers',
+			oLanguage: {  
+				'sLengthMenu': '每页显示 _MENU_条',  
+				'sZeroRecords': '没有找到符合条件的数据',  
+				'sProcessing': '&lt;img src=’./loading.gif’ /&gt;',  
+				'sInfo': '当前第 _START_ - _END_ 条　共计 _TOTAL_ 条',  
+				'sInfoEmpty': '木有记录',  
+				'sInfoFiltered': '(从 _MAX_ 条记录中过滤)',  
+				'sSearch': '搜索：',  
+				'oPaginate': {  
+				'sFirst': '首页',  
+				'sPrevious': '前一页',  
+				'sNext': '后一页',  
+				'sLast': '尾页'  
+				}  
+			}
+        }" class="table table-striped b-t b-b">
+        <thead>
+          <tr>
+            <th  style="width:20%">Rendering engine</th>
+            <th  style="width:25%">Browser</th>
+            <th  style="width:25%">Platform(s)</th>
+            <th  style="width:15%">Engine version</th>
+            <th  style="width:15%">CSS grade</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>

@@ -1,0 +1,39 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title">商品明细导入</h6>
+</div>
+<div class="modal-body">
+	<div class="form-group row">
+	  <label class="col-sm-2 form-control-label">商品信息</label>
+	  <div class="col-sm-6">
+		<input type="file" nv-file-select="" uploader="uploader"/><br/>
+	  </div>
+	  <div class="col-sm-4">
+		<span class="text-info">导入模板下载</span>
+	  </div>
+	</div>
+	<div class="row" ng-repeat="item in uploader.queue">
+		<div class="col-sm-4">
+			<div class="progress pull-left" ng-show="uploader.isHTML5">
+				<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="pull-left m-l" ng-show="uploader.isHTML5">{{ item.file.size/1024/1024|number:2 }} MB</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="pull-left m-l text-success" ng-show="uploader.isHTML5" ng-if="item.isSuccess">上传成功</div>
+		</div>
+		<div class="col-sm-4">
+			<div ng-thumb="{ file: item._file, width: 100 }"></div>
+		</div>
+	</div>
+	<h6><b>注意事项</b></h6>
+	<div>1、导入文件格式必须与系统提供的模板格式一致；</div>
+	<div>2、"商品条码"与"商品代码【+规格代码】"二者必填其一；</div>
+	<div>3、以两者皆提供时，以"商品条码"为准进行匹配；</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+	<button type="submit" class="btn danger p-x-md" ng-click="confirm_importprd()">确定</button>
+</div>

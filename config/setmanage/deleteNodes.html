@@ -1,0 +1,12 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title">删除节点</h6>
+</div>
+<div class="modal-body">
+	<div ng-bind="alertinfo"></div>
+	你确认删除这些节点吗？
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn dark-white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+	<button type="submit" class="btn danger p-x-md" ng-click="savedeleteNode()">确定</button>
+</div>

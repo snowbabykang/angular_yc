@@ -1,0 +1,17 @@
+<div class="padding" ng-controller="confighomeCtr">
+	<div class="box">
+		<div class="padding">
+			<h5>按钮点击延迟事件</h5>
+			<div>使用disabled来禁止点击事件，查看console里面有简单的点击事件返回结果</div>
+			<button class="btn btn-fw white" delaybtn ng-click="backinfo('2秒钟点击一次')">2秒钟点击一次</button> 
+			<button class="btn btn-fw warn" ng-click="backinfo('可以重复点击')">可以重复点击</button> 
+			<span class="btn btn-fw info" delaybtn ng-click="backinfo('2秒钟点击一次')">2秒钟点击一次</span> 
+			
+			<hr />
+			<button class="btn btn-fw white" disabled="disabled" ng-click="backinfo('不可点击')">不可点击</button> 
+			<button class="btn btn-fw info" disabled="disabled" ng-click="backinfo('不可点击info')">不可点击</button> 
+			<span class="btn btn-fw info disabled" disabled="disabled" ng-click="backinfo('不可点击info')">不可点击</span>  
+		
+		</div>
+	</div>
+</div>

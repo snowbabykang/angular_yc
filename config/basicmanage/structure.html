@@ -1,0 +1,57 @@
+<div class="padding">
+	<div class="box">
+		<div class="padding">
+			<h5>switch切换</h5>
+			<div>
+				<h6>小号：初始化默认为1</h6>
+				<label class="ui-switch pull-left" ng-init="status1 = status1 || '1'">
+					<input type="checkbox" ng-model="status1" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status1 == '1'"> <i></i>
+				</label>
+				<span class="m-l">值为{{status1}}</span>
+			</div>
+			<h6 class="m-t">其他颜色</h6>
+			<label class="ui-switch primary m-t-xs m-r"><input type="checkbox" ng-model="status1" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status1 == '1'"> <i></i></label>
+			<label class="ui-switch info m-t-xs m-r"><input type="checkbox" ng-model="status1" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status1 == '1'"> <i></i></label>
+			<label class="ui-switch warning m-t-xs m-r"><input type="checkbox" ng-model="status1" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status1 == '1'"> <i></i></label>
+			<label class="ui-switch danger m-t-xs m-r"><input type="checkbox"ng-model="status1" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status1 == '1'"> <i></i></label>
+			<div class="m-t-lg">
+				<h6>中号：初始化默认为0</h6>
+				<label class="ui-switch ui-switch-md pull-left" ng-init="status2 = status2 || '0'">
+					<input type="checkbox" ng-model="status2" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status2 == '1'"> <i></i>
+				</label>
+				<span class="m-l">值为{{status2}}</span>
+			</div>
+			<div class="m-t-lg">
+				<h6>大号：初始化默认为1</h6>
+				<label class="ui-switch ui-switch-lg pull-left" ng-init="status3 = status3 || '1'">
+					<input type="checkbox" ng-model="status3" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status3 == '1'"> <i></i>
+				</label>
+				<span class="m-l">值为{{status3}}</span>
+			</div>
+			<div class="m-t-lg"> 
+				<h6>带字中号：初始化默认为1</h6>
+				<label class="ui-switch ui-switch-font ui-switch-md pull-left m-r" ng-class="{'1': 'on','0' : 'off'}[status4]" ng-init="status4 = status4 || '1'">
+					<input type="checkbox" ng-model="status4" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status4 == '1'"><i></i>
+					<span class="ui-switch-info" ng-bind="status4 == '1' ? 'ON' : 'OFF'"></span>
+				</label>
+				<label class="ui-switch ui-switch-font ui-switch-md pull-left" ng-class="{'1': 'on','0' : 'off'}[status4]" ng-init="status4 = status4 || '1'">
+					<input type="checkbox" ng-model="status4" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status4 == '1'"><i></i>
+					<span class="ui-switch-info" ng-bind="status4 == '1' ? '开启' : '关闭'"></span>
+				</label>
+				<span class="m-l">值为{{status4}}</span>
+			</div> 
+			<div class="m-t-lg"> 
+				<h6>带字大号：初始化默认为1</h6>
+				<label class="ui-switch ui-switch-font ui-switch-lg pull-left m-r" ng-class="{'1': 'on','0' : 'off'}[status5]" ng-init="status5 = status5 || '1'">
+					<input type="checkbox" ng-model="status5" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status5 == '1'"><i></i>
+					<span class="ui-switch-info" ng-bind="status5 == '1' ? 'ON' : 'OFF'"></span>
+				</label>
+				<label class="ui-switch ui-switch-font ui-switch-lg pull-left" ng-class="{'1': 'on','0' : 'off'}[status5]" ng-init="status5 = status5 || '1'">
+					<input type="checkbox" ng-model="status5" ng-true-value="'1'" ng-false-value="'0'" ng-checked="status5 == '1'"><i></i>
+					<span class="ui-switch-info" ng-bind="status5 == '1' ? '开启' : '关闭'"></span>
+				</label>
+				<span class="m-l">值为{{status5}}</span>
+			</div> 
+		</div>
+	</div>
+</div>

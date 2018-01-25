@@ -1,0 +1,45 @@
+<table class="table table-striped table-hover b-t b-b">
+	<tr>
+		<th></th>
+		<th>货品编码</th>
+		<th>货主编码</th>
+		<th>货品名称</th>
+		<th>请求数量</th>
+		<th>发货数量</th>
+	</tr>
+	<tr ng-repeat = "item in orderdetailarr">
+		<td>{{$index+1}}</td>
+		<td>{{item.ItemCode}}</td>
+		<td>{{item.CompanyCode}}</td>
+		<td>{{item.ItemDesc}}</td>
+		<td>{{item.RequestQty}}</td>
+		<td>{{item.ShipQty}}</td>
+	</tr>
+	<tr ng-controller="ordermainpageCtrl">
+		<td colspan="6">
+			<div class="row">
+				<div class="col-md-6" style="line-height:40px;">
+					第 {{currentPage}} / {{ordernumPages}} 页  每页{{orderpagesize}}条　共计 {{orderTotalItems}} 条
+				</div>
+				<div class="col-md-6">
+					<uib-pagination 
+						previous-text="上一页" 
+						next-text="下一页" 
+						first-text="首页" 
+						last-text="尾页" 
+						total-items="orderTotalItems" 
+						max-size="maxSize" 
+						boundary-links="true" 
+						rotate="false" 
+						num-pages="ordernumPages" 
+						items-per-page="orderpagesize"
+						ng-model="currentPage" 
+						class="pagination-sm m-t-none" 
+						style="margin:0;float:right;" 
+						ng-change="orderdetailpage(currentPage)">
+					</uib-pagination>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

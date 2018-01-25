@@ -1,0 +1,107 @@
+<div class="p-a w-lg light treebox scrollable">
+	<div>角色管理</div>
+	<ul roletree class="ztree " ng-model="selectNode" id="roletree"></ul>
+</div>
+<div class="row-col" style="padding-left:240px;width:100%;">
+    <div class="col-sm" >
+		<div class="p-a">
+			<div class="box p-a"  ng-controller="roleModalCtl">
+				<div class="btn-groups">
+					<button class="btn info btn-sm" ng-click="open()">新增角色</button>
+					<button class="btn white btn-sm" ng-click="update()">编辑角色</button>
+					<button class="btn white btn-sm" ng-click="delete()">删除角色</button>
+					<button class="btn white btn-sm" ng-click="saverolepower()">保存角色权限</button>
+				</div>
+				<hr />
+				<uib-tabset class="nav-active-success tab-container">
+					<uib-tab heading="{{'10004' | translate}}">
+						<div class="p-a">
+							<div class="p-b">【{{curretnrole}}】 <span translate="10006"></span></div>
+							<div class="btn-groups">
+								<button class="btn info btn-sm" ng-click="openuser()">新增用户</button>
+								<button class="btn white btn-sm" ng-click="deleteuser()">删除用户</button>
+							</div>
+							<div class="table-responsive fade-in-up" ng-if="rolepeoplelist">
+								<table class="table table-striped b-t b-b">
+									<thead>
+										<tr>
+											<th>
+												<label class="ui-check">
+													<input type="checkbox" value="" name="checkall">
+													<i class="dark-white"></i>
+												</label>
+											</th>
+											<th>登录名</th>
+											<th>名字</th>
+											<th>创建时间</th>
+											<th>是否使用</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat = "item in rolepeoplelist" class="fade-in-up">
+											<td>
+												<label class="ui-check">
+													<input type="checkbox" name="usercheck" ng-model="usercheck" ng-click="checkNode(usercheck,item.id)">
+													<i class="dark-white"></i>
+												</label>
+											</td>
+											<td>{{item.loginname}}</td>
+											<td>{{item.name}}</td>
+											<td>{{item.creat_time}}</td>
+											<td ng-if = "item.use_state == 1"><i class="fa fa-check-circle text-success text-lg"></i></td>
+											<td ng-if = "item.use_state == 0"><i class="fa fa-ban text-dark text-lg"></i></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr ng-controller = "rolepeoplepageCtrl">
+											<td colspan="5">
+												<div class="row">
+													<div class="col-md-6" style="line-height:40px;">
+														第 {{bigCurrentPage}} / {{numPages}} 页  每页{{pagesize}}条　共计 {{bigTotalItems}} 条
+													</div>
+													<div class="col-md-6">
+														<uib-pagination 
+															previous-text="上一页" 
+															next-text="下一页" 
+															first-text="首页" 
+															last-text="尾页" 
+															total-items="bigTotalItems" 
+															max-size="maxSize" 
+															boundary-links="true" 
+															rotate="false" 
+															num-pages="numPages" 
+															items-per-page="pagesize"
+															ng-model="bigCurrentPage" 
+															class="pagination-sm m-t-none" 
+															style="margin:0;float:right;" 
+															ng-change="pageChanged(bigCurrentPage)">
+														</uib-pagination>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div class="fade-in-up" ng-if="!rolepeoplelist">
+								<div class="p-a-lg text-center animated fadeInUp">
+									<span class="text-3x">
+									  <i class="fa fa-exclamation-circle text-2x text-warn"></i>
+									</span>
+									<h4 class="_300 text-muted">
+									   暂时没有员工
+									</h4>
+								</div>
+							</div>
+						</div>
+					</uib-tab>
+					<uib-tab heading="{{'10005' | translate}}">
+						<div class="p-a">
+							<ul menutree class="ztree" ng-model="selectmenuNode" id="menutree"></ul>
+						</div>
+					</uib-tab>
+				</uib-tabset>
+			</div>
+		</div>
+    </div>
+</div>

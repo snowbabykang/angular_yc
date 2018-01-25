@@ -1,0 +1,28 @@
+<ul class="nav" ui-nav>
+    <li ng-class="{active:$state.includes('app.'+main.FunctionCode)}" ng-repeat="main in mainmenu | filter: mymainFilter | orderBy : sequence">
+		<a>
+			<span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+			<span class="nav-icon" style="font-size: 13px;"><i class="{{main.Icon}}"></i></span>
+			<span class="nav-text" ng-bind="main.FunctionName" translate="header.navbar.{{main.FunctionCode}}"></span>
+		</a>
+		<ul class="nav-sub">
+			<li ng-repeat="item in mainmenu | menufilter : main.FunctionCode | orderBy : sequence" 
+				ng-class="{'active':isfoldsidebar(item)}">
+				<a ng-if="item.Uri" ui-sref="app.{{item.Uri}}"><span class="nav-text" ng-bind="item.FunctionName"></span></a>
+				<a ng-if="!item.Uri">
+					<span class="nav-caret">
+						<i class="fa fa-caret-down"></i>
+					</span>
+					<span class="nav-text" ng-bind="item.FunctionName"  translate="sidebar.{{main.FunctionCode}}.{{item.FunctionCode}}"></span>
+				</a>
+				<ul ng-if="!item.Uri" class="nav-sub nav-sub-sub">
+					<li ng-repeat="subitem in item.submenu | orderBy : sequence"  ng-class="{active:$state.includes('app.'+subitem.Uri)}">
+						<a ui-sref="app.{{subitem.Uri}}">
+							<span class="nav-text" ng-bind="subitem.FunctionName" translate="sidebar.{{main.FunctionCode}}.{{subitem.FunctionCode}}"></span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+    </li>
+</ul>

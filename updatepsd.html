@@ -1,0 +1,38 @@
+<div class="padding">
+	<div class="box">
+		<div class="box-header">
+			<h2>修改密码</h2>
+		</div>
+		<div class="padding" ng-controller="updatepsdCtrl">
+			<form class="form-validation" name="form">
+				<div class="form-group row">
+				  <label class="col-sm-2 form-control-label text-right">原密码</label>
+				  <div class="col-sm-4">
+					<input type="password" class="form-control" ng-model="password" required placeholder="请输入原密码">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label class="col-sm-2 form-control-label text-right">新密码</label>
+				  <div class="col-sm-4">
+					<input type="password" class="form-control" ng-model="newpassword1" required placeholder="请输入原密码">
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label class="col-sm-2 form-control-label text-right">再次输入新密码</label>
+				  <div class="col-sm-4">
+					<input type="password" name="confirmpsd" class="form-control" ng-model="newpassword2" required placeholder="请输入原密码" ui-validate=" '$value==newpassword1' " ui-validate-watch=" 'newpassword1' ">
+				  </div>
+				  <div class="col-sm-4">
+					<div ng-show="form.confirmpsd.$error.validator" class="form-control-static text-danger">请保持新密码一致</div>
+				  </div>
+				</div>
+				<div class="form-group row">
+				  <label class="col-sm-2 form-control-label text-right"></label>
+				  <div class="col-sm-4">
+					<button type="submit" class="btn danger p-x-md" ng-click="updatepassword(password,newpassword1,newpassword2)">确定</button>
+				  </div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

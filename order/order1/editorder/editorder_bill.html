@@ -1,0 +1,59 @@
+<div class="btn-groups p-t">
+	<button class="btn info btn-sm" ng-click="add_orderbill()">新增</button>
+	<button class="btn white m-l btn-sm" ng-click="edit_orderbill()">编辑</button>
+	<button class="btn white m-l btn-sm" ng-click="delete_orderbill()">删除</button>
+</div>
+<div class="table-responsive fade-in-up">
+	<table class="table table-striped table-hover b-t b-b" ng-if="orderbilllist.length > 0">
+		<thead>
+			<tr>
+				<th width="40"></th>
+				<th width="40">
+					<label class="ui-check" style="margin-bottom: 0;">
+						<input type="checkbox" name="checkallbill" ng-model="checkallbill" ng-click="checkallorderbill(checkallbill)">
+						<i class="dark-white"></i>
+					</label>
+				</th>
+				<th width="120">发票类型</th>
+				<th width="120">发票抬头</th>
+				<th width="120">发票内容</th>
+				<th width="120">纳税人识别号</th>
+				<th width="80">开户行</th>
+				<th width="90">账号</th>
+				<th width="150">地址</th>
+				<th width="150" >电话</th>
+				<th>发票金额</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in orderbilllist" ng-click="selectorderbill($event,item)" ng-class="item.orderbillcheck ? 'orderchecked' : ''">
+				<td>{{$index+1}}</td>
+				<td>
+					<label class="ui-check">
+						<input type="checkbox" name="orderbillcheck" ng-model="item.orderbillcheck" ng-click="checkorderbill($event,item)">
+						<i class="dark-white"></i>
+					</label>
+				</td>
+				<td data-typeid = "{{item.type}}">{{bill_arr[item.type]}}</td>
+				<td>{{item.title}}</td>
+				<td>{{item.content}}</td>
+				<td>{{item.texPayerNumber}}</td>
+				<td>{{item.bankName}}</td>
+				<td>{{item.bankAccount}}</td>
+				<td>{{item.address}}</td>
+				<td>{{item.phone}}</td>
+				<td>{{item.amount}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="fade-in-up" ng-if="orderbilllist.length <= 0">
+		<div class="p-a-lg text-center">
+			<span class="text-3x">
+			  <i class="fa fa-exclamation-circle text-2x text-warn"></i>
+			</span>
+			<h4 class="_300 text-muted">
+			   暂时没有发票信息
+			</h4>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<form  class="form-validation" style="margin:50px auto;width:1000px;">
+	<div class="form-group row">
+		<label class="col-md-3 form-control-label text-right">企业邀请码</label>
+		<div class="col-md-6">
+			<input class="form-control" type="text" ng-model="invitationcode" required ng-pattern="/^[0-9A-Za-z]+$/" placeholder="请输入邀请码">
+		</div>
+		<div class="col-md-3">
+			<p class="text-danger form-control-static">请输入数字和字母组成的邀请码</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-9">
+			<button class="btn info" ng-click="registerToStep2(invitationcode)">下一步</button>
+		</div>
+	</div>
+</form>

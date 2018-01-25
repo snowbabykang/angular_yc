@@ -1,0 +1,26 @@
+<div class="padding">
+	<div class="box">
+		<div class="box-header">
+			<h2>{{typetitle}}</h2>
+		</div>
+		<div class="p-l p-r p-b">
+			<uib-tabset class="nav-active-info tab-container">
+				<uib-tab heading="订单信息" ng-click="showeditorderinfo('info')">
+					<div ng-include="'order/order1/editorder/editorder_info.html'" class="fade-in-up p-t"></div>
+				</uib-tab>
+				<uib-tab heading="商品信息" ng-click="showeditorderinfo('prd')">
+					<div ng-include="'order/order1/editorder/editorder_prd.html'" class="fade-in-up p-t" ng-controller="orderprdmainCtrl"></div>
+				</uib-tab>
+				<uib-tab heading="支付明细" ng-click="showeditorderinfo('pay')">
+					<div ng-include="'order/order1/editorder/editorder_pay.html'" class="fade-in-up p-t" ng-controller="orderpaymainCtrl"></div>
+				</uib-tab>
+				<uib-tab heading="发票信息" ng-click="showeditorderinfo('bill')">
+					<div ng-include="'order/order1/editorder/editorder_bill.html'" class="fade-in-up p-t" ng-controller="orderbillmainCtrl"></div>
+				</uib-tab>
+				<uib-tab heading="收货地址" ng-click="showeditorderinfo('addr')">
+					<div ng-include="'order/order1/editorder/editorder_addr.html'" class="fade-in-up p-t"></div>
+				</uib-tab>
+			</uib-tabset>
+		</div>
+	</div>
+</div>

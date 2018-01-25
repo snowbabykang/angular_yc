@@ -1,0 +1,56 @@
+
+<style>
+body{color: #2c3a46;background: #fff;font-size: 14px;line-height: 1.6em;font-family: Helvetica,STHeiti,"Microsoft YaHei",Verdana,Arial,Tahoma,sans-serif;}
+</style>
+<div class="login_hd b-t b-t-3x">
+	<div class="login_container">
+		<a target="_blank" href="http://www.fisher-logistics.com" class="logo"><img src="assets/images/seller_logo@2x.png" alt="" /></a>
+		<div class="logotitle">
+			<div class="companytitle">费舍尔物流科技集团</div>
+			<div class="companyengtitle">FISHER LOGISTICS TECHNOLOGY GROUP</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="login_con">
+	<div class="loginwrap">
+		<div class="loginbox">
+			<div class="login_namebox">
+				<div class="title">进出口跨境电商物流与供应链管理平台</div>
+				<div class="subtitle">Cross-border Logistics and Supply Chain Management Platform</div>
+			</div>
+			<form class="loginform" name="loginform" ng-controller="loginCtrl">
+				<div class="title m-b">用户登录
+					<a ui-sref="register.step1" target="_blank" class="text-danger registerbtn">立即注册</a>
+				</div>
+				<div class="logininput loginaccount form-group">
+					<input type="text" name="loginaccount" ng-change="changeuser(login)" oninvalid="setCustomValidity('请输入账户！');" oninput="setCustomValidity('');" class="form-control" placeholder="请输入账户" ng-model="login.account" required>
+				</div>
+				<div class="logininput loginpsd form-group">
+					<input type="password" name="loginpsd" class="form-control" placeholder="请输入密码" ng-model="login.psd" required>
+				</div>
+				<div class="form-group">
+					<div id="drag" logindrag ng-model="login.dragvalidate" ng-class="login.dragvalidate == '0' ? 'failvalidate' : ''"></div>
+				</div>
+				<div class="checkbox-inline rememberuser">
+					<label class="ui-check">
+						<input type="checkbox" ng-model="login.remember" ng-true-value="'1'" ng-false-value="'0'">
+						<i class="dark-white"></i>
+						记住账户
+					</label>
+				</div>
+				<button class="btn loginbtn" ng-click="submitlogin(login)">登陆</button>
+				<div class="clearfix"></div>
+				<p class="loginboxinfo p-t b-t m-t">
+					 了解更多信息 ?&nbsp;请访问 <a target="_blank" href="http://www.fisher-logistics.com" class="text-info">
+					费舍尔物流科技集团</a> 网站 
+				</p>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="login_ft">
+	<div class="copyright">
+		Copyright © 2015-2016  进出口跨境电商物流与供应链管理平台.
+	</div>
+</div>

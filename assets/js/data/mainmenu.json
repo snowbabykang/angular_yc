@@ -1,0 +1,287 @@
+{
+"mainmenu":[
+    {
+        "FunctionCode": "config",
+        "FunctionName": "控制中心",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "config.powermanage.index",
+        "Sequence": 1,
+        "Icon": "fa fa-desktop"
+    },
+    {
+        "FunctionCode": "order",
+        "FunctionName": "订单处理",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "order.order1.order11",
+        "Sequence": 2,
+        "Icon": "fa fa-file-text"
+    },
+    {
+        "FunctionCode": "express",
+        "FunctionName": "快递处理",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "express.express1",
+        "Sequence": 3,
+        "Icon": "fa fa-truck"
+    },
+    {
+        "FunctionCode": "goods",
+        "FunctionName": "货物溯源",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "goods.savesource",
+        "Sequence": 6,
+        "Icon": "fa fa-search"
+    },
+    {
+        "FunctionCode": "payinfo",
+        "FunctionName": "支付信息",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "payinfo",
+        "Sequence": 4,
+        "Icon": "fa fa-cny"
+    },
+    {
+        "FunctionCode": "report",
+        "FunctionName": "报表处理",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "report",
+        "Sequence": 7,
+        "Icon": "fa fa-line-chart"
+    },
+    {
+        "FunctionCode": "eport",
+        "FunctionName": "电子口岸",
+        "FunctionType": "GROUP",
+        "ParentCode": null,
+        "Uri": "eport",
+        "Sequence": 5,
+        "Icon": "fa fa-cubes"
+    },
+    {
+        "FunctionCode": "powermanage",
+        "FunctionName": "权限管理",
+        "FunctionType": "MENU",
+        "ParentCode": "config",
+        "Uri": "",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[
+        	{
+		        "FunctionCode": "userpower",
+		        "FunctionName": "用户权限",
+		        "FunctionType": "MENU",
+		        "ParentCode": "powermanage",
+		        "Uri": "config.powermanage.userpower",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+		    {
+		        "FunctionCode": "rolepower",
+		        "FunctionName": "角色权限",
+		        "FunctionType": "MENU",
+		        "ParentCode": "powermanage",
+		        "Uri": "config.powermanage.rolepower",
+		        "Sequence": 802,
+		        "Icon": "fa fa-code"
+		    },
+		    {
+		        "FunctionCode": "datapower",
+		        "FunctionName": "数据权限",
+		        "FunctionType": "MENU",
+		        "ParentCode": "powermanage",
+		        "Uri": "config.powermanage.datapower",
+		        "Sequence": 803,
+		        "Icon": "fa fa-code"
+		    }
+        ]
+    },
+    {
+        "FunctionCode": "basicmanage",
+        "FunctionName": "基础管理",
+        "FunctionType": "MENU",
+        "ParentCode": "config",
+        "Uri": "",
+        "Sequence": 9,
+        "Icon": "fa fa-code",
+        "submenu":[
+        	{
+		        "FunctionCode": "structure",
+		        "FunctionName": "组织架构",
+		        "FunctionType": "MENU",
+		        "ParentCode": "basicmanage",
+		        "Uri": "config.basicmanage.structure",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+		    {
+		        "FunctionCode": "usermanage",
+		        "FunctionName": "用户管理",
+		        "FunctionType": "MENU",
+		        "ParentCode": "basicmanage",
+		        "Uri": "config.basicmanage.usermanage",
+		        "Sequence": 802,
+		        "Icon": "fa fa-code"
+		    },
+		    {
+		        "FunctionCode": "datasources",
+		        "FunctionName": "数据资源",
+		        "FunctionType": "MENU",
+		        "ParentCode": "basicmanage",
+		        "Uri": "config.basicmanage.datasources",
+		        "Sequence": 803,
+		        "Icon": "fa fa-code"
+		    }
+        ]
+    },
+    {
+        "FunctionCode": "setmanage",
+        "FunctionName": "配置管理",
+        "FunctionType": "MENU",
+        "ParentCode": "config",
+        "Uri": "",
+        "Sequence": 10,
+        "Icon": "fa fa-code",
+        "submenu":[
+        	{
+		        "FunctionCode": "departmanage",
+		        "FunctionName": "部门管理",
+		        "FunctionType": "MENU",
+		        "ParentCode": "setmanage",
+		        "Uri": "config.setmanage.departmanage",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+		    {
+		        "FunctionCode": "staffmanage",
+		        "FunctionName": "员工管理",
+		        "FunctionType": "MENU",
+		        "ParentCode": "setmanage",
+		        "Uri": "config.setmanage.staffmanage",
+		        "Sequence": 802,
+		        "Icon": "fa fa-code"
+		    }
+        ]
+    },
+    {
+        "FunctionCode": "order1",
+        "FunctionName": "订单处理一",
+        "FunctionType": "MENU",
+        "ParentCode": "order",
+        "Uri": "",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[
+        	{
+		        "FunctionCode": "order11",
+		        "FunctionName": "订单列表",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order1",
+		        "Uri": "order.order1.order11",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+        	{
+		        "FunctionCode": "order12",
+		        "FunctionName": "供应商列表",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order1",
+		        "Uri": "order.order1.order12",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+        	{
+		        "FunctionCode": "order13",
+		        "FunctionName": "订单处理13",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order1",
+		        "Uri": "order.order1.order13",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    }
+        ]
+    },
+    {
+        "FunctionCode": "order2",
+        "FunctionName": "订单处理二",
+        "FunctionType": "MENU",
+        "ParentCode": "order",
+        "Uri": "",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[
+        	{
+		        "FunctionCode": "order21",
+		        "FunctionName": "订单处理21",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order2",
+		        "Uri": "order.order2.order21",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+        	{
+		        "FunctionCode": "order22",
+		        "FunctionName": "订单处理22",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order2",
+		        "Uri": "order.order2.order22",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    },
+        	{
+		        "FunctionCode": "order23",
+		        "FunctionName": "订单处理23",
+		        "FunctionType": "MENU",
+		        "ParentCode": "order2",
+		        "Uri": "order.order2.order23",
+		        "Sequence": 801,
+		        "Icon": "fa fa-code"
+		    }
+        ]
+    },
+    {
+        "FunctionCode": "express1",
+        "FunctionName": "快递处理一",
+        "FunctionType": "MENU",
+        "ParentCode": "express",
+        "Uri": "express.express1",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[]
+    },
+    {
+        "FunctionCode": "express2",
+        "FunctionName": "快递处理二",
+        "FunctionType": "MENU",
+        "ParentCode": "express",
+        "Uri": "express.express2",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[]
+    },
+    {
+        "FunctionCode": "express3",
+        "FunctionName": "快递处理三",
+        "FunctionType": "MENU",
+        "ParentCode": "express",
+        "Uri": "express.express3",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[]
+    },
+	{
+        "FunctionCode": "savesource",
+        "FunctionName": "安全溯源",
+        "FunctionType": "MENU",
+        "ParentCode": "goods",
+        "Uri": "goods.savesource",
+        "Sequence": 8,
+        "Icon": "fa fa-code",
+        "submenu":[]
+    }
+]}

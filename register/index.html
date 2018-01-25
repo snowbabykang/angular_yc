@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<style>
+body{background:#fff;}
+</style>
+<div class="login_hd">
+	<div class="login_container">
+		<a target="_blank" href="http://www.fisher-logistics.com" class="logo"><img src="assets/images/seller_logo@2x.png" alt="" /></a>
+		<div class="logotitle" style=" font-size: 20px;padding-top: 17px;">
+			用户注册
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="progress_bar">
+	<ul class="progress_step">
+		<li ng-class="{'active':$state.includes('register.step1')}">
+			<span class="progress_circle">1</span>
+			<span class="stepinfo">验证邀请码</span>
+		</li>
+		<li ng-class="{'active':$state.includes('register.step2')}">
+			<span class="progress_circle">2</span>
+			<span class="stepinfo">填写企业信息</span>
+		</li>
+		<li ng-class="{'active':$state.includes('register.step3')}">
+			<span class="progress_circle">3</span>
+			<span class="stepinfo">注册成功</span>
+		</li>
+	</ul>
+</div>
+<div class="fade-in-up" ui-view></div>

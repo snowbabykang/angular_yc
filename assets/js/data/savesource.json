@@ -1,0 +1,101 @@
+{
+    "result": "Success",
+    "resultMsg": null,
+    "list": [
+        {
+            "mdKey": "商品溯源信息",
+            "mdSize": "1",
+            "mdVale": "123",
+            "mdCss": 1,
+            "mdColor": "1",
+            "sequence": "1",
+            "mdSource": "A01",
+            "msg": [
+                {
+                    "mdKey": "商品名称",
+                    "mdSize": "1",
+                    "mdVale": "奶粉",
+                    "mdCss": 2,
+                    "mdColor": "1",
+                    "sequence": "2",
+                    "mdPid": 1,
+                    "mdSource": "A01",
+                    "mdId": 2
+                },
+                {
+                    "mdKey": "原产国",
+                    "mdSize": "1",
+                    "mdVale": "还好",
+                    "mdCss": 2,
+                    "mdColor": "1",
+                    "sequence": "3",
+                    "mdPid": 1,
+                    "mdSource": "A01",
+                    "mdId": 3
+                },
+                {
+                    "mdKey": "产地",
+                    "mdSize": "1",
+                    "mdVale": "test",
+                    "mdCss": 9,
+                    "mdColor": "1",
+                    "sequence": "4",
+                    "mdPid": 1,
+                    "mdSource": "A01",
+                    "mdId": 4
+                }
+            ],
+            "mdId": 1
+        },
+        {
+            "mdKey": "快递溯源信息",
+            "mdSize": "1",
+            "mdVale": "222",
+            "mdCss": 1,
+            "mdColor": "1",
+            "sequence": "5",
+            "mdSource": "A01",
+            "msg": [
+                {
+                    "mdKey": "运单号",
+                    "mdSize": "1",
+                    "mdVale": "28374648",
+                    "mdCss": 2,
+                    "mdColor": "1",
+                    "sequence": "6",
+                    "mdPid": 5,
+                    "mdSource": "A01",
+                    "mdId": 6
+                },
+                {
+                    "mdKey": "揽件时间",
+                    "mdSize": "1",
+                    "mdVale": "www",
+                    "mdCss": 2,
+                    "mdColor": "1",
+                    "sequence": "7",
+                    "mdPid": 5,
+                    "mdSource": "A01",
+                    "mdId": 7
+                },
+                {
+                    "mdKey": "ggg",
+                    "mdSize": "1",
+                    "mdVale": "syh",
+                    "mdCss": 9,
+                    "mdColor": "1",
+                    "sequence": "8",
+                    "mdPid": 5,
+                    "mdSource": "A01",
+                    "mdId": 8
+                }
+            ],
+            "mdId": 5
+        }
+    ],
+    "map": null,
+    "flag": false,
+    "total": 0,
+    "rows": null,
+    "tableField": null
+}

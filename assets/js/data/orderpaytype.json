@@ -1,0 +1,184 @@
+[
+    {
+        "id": "10010349",
+        "code": "zhifubao",
+        "name": "支付宝",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "10010350",
+        "code": "wangyin",
+        "name": "网银在线",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "10010351",
+        "code": "caifutong",
+        "name": "财付通",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "10010354",
+        "code": "huikuan",
+        "name": "邮局汇款",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "10011765",
+        "code": "cod",
+        "name": "货到付款",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "25910232",
+        "code": "cash",
+        "name": "现金支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383376391",
+        "code": "01",
+        "name": "中国银联",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383378188",
+        "code": "03",
+        "name": "盛付通",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383378723",
+        "code": "04",
+        "name": "建设银行",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383379227",
+        "code": "05",
+        "name": "中国银行",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383379767",
+        "code": "06",
+        "name": "易付宝",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383380118",
+        "code": "07",
+        "name": "农业银行",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383380450",
+        "code": "08",
+        "name": "京东网银在线",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383380645",
+        "code": "09",
+        "name": "国际支付宝",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383381217",
+        "code": "10",
+        "name": "甬易支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383381578",
+        "code": "11",
+        "name": "富友支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383381919",
+        "code": "12",
+        "name": "连连支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383382880",
+        "code": "14",
+        "name": "快钱",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383383192",
+        "code": "15",
+        "name": "网易宝",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "383383300",
+        "code": "16",
+        "name": "微支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "955633488",
+        "code": "weixin",
+        "name": "微信支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "964087151",
+        "code": "balance",
+        "name": "预存款",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "984008995",
+        "code": "jingdou",
+        "name": "京豆优惠",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "984008996",
+        "code": "jdcoupon",
+        "name": "京东券优惠",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "1029058854",
+        "code": "yuen",
+        "name": "余额支付",
+        "del": false,
+        "note": ""
+    },
+    {
+        "id": "1029058855",
+        "code": "haibi",
+        "name": "嗨币支付",
+        "del": false,
+        "note": ""
+    }
+]

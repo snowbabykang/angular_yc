@@ -1,0 +1,61 @@
+<div class="btn-groups p-t">
+	<button class="btn info btn-sm" ng-click="add_orderpay()">新增</button>
+	<button class="btn white m-l btn-sm" ng-click="edit_orderpay()">编辑</button>
+	<button class="btn white m-l btn-sm" ng-click="delete_orderpay()">删除</button>
+</div>
+<div class="table-responsive fade-in-up">
+	<table class="table table-striped table-hover b-t b-b" ng-if = "orderpaylist.length > 0">
+		<thead>
+			<tr>
+				<th width="40"></th>
+				<th width="40">
+					<label class="ui-check" style="margin-bottom: 0;">
+						<input type="checkbox" name="checkallpay" ng-model="checkallpay" ng-click="checkallorderpay(checkallpay)">
+						<i class="dark-white"></i>
+					</label>
+				</th>
+				<th>支付方式</th>
+				<th>支付金额</th>
+				<th>支付时间</th>
+				<th>交易号</th>
+				<th>账号</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in orderpaylist" ng-click="selectorderpay($event,item)" ng-class="item.orderpaycheck ? 'orderchecked' : ''">
+				<td>{{$index+1}}</td>
+				<td>
+					<label class="ui-check">
+						<input type="checkbox" name="orderpaycheck" ng-model="item.orderpaycheck" ng-click="checkorderpay($event,item)">
+						<i class="dark-white"></i>
+					</label>
+				</td>
+				<td data-typeid = "{{item.type}}">
+					{{pay_arr[item.type]}}
+				</td>
+				<td>
+					{{item.price}}
+				</td>
+				<td>
+					{{item.time}}
+				</td>
+				<td>
+					{{item.payid}}
+				</td>
+				<td>
+					{{item.userid}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="fade-in-up" ng-if="orderpaylist.length <= 0">
+		<div class="p-a-lg text-center">
+			<span class="text-3x">
+			  <i class="fa fa-exclamation-circle text-2x text-warn"></i>
+			</span>
+			<h4 class="_300 text-muted">
+			   暂时没有支付信息
+			</h4>
+		</div>
+	</div>
+</div>

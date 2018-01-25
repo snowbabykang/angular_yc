@@ -1,0 +1,70 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title" ng-if="orderbilltype == 'add'">新增订单发票信息</h6>
+	<h6 class="modal-title" ng-if="orderbilltype == 'edit'">编辑订单发票信息</h6>
+</div>
+<form class="form-validation">
+	<div class="modal-body">
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">发票类型</label>
+		  <div class="col-sm-10">
+			<!-- <select class="form-control" ng-model="orderbilldata.type" ng-options="y as y.name for y in billtype_arr track by y.id" required> -->
+			<select class="form-control" ng-model="orderbilldata.type" ng-options="y.id as y.name for y in billtype_arr" required>
+				<option value="">---请选择---</option>
+			</select>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">发票抬头</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.title" placeholder="请输入发票抬头">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">发票内容</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.content" placeholder="请输入发票内容">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">纳税人识别号</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.texPayerNumber" placeholder="请输入纳税人识别号">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">开户行</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.bankName" placeholder="请输入开户行">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">账号</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.bankAccount" placeholder="请输入账号">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">地址</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.address" placeholder="请输入地址">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">电话</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.phone" placeholder="请输入电话">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">发票金额</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="orderbilldata.amount" placeholder="请输入发票金额" ng-pattern="/^\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?$/">
+		  </div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+		<button type="submit" class="btn danger p-x-md" ng-click="saveOrderbilldata(orderbilldata,orderbilltype)">保存</button>
+	</div>
+</form>

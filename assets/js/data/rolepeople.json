@@ -1,0 +1,53 @@
+{
+	"count" : 101,
+	"page" : 1,
+	"pagesize" : 10,
+    "list": {
+		"1" : [
+			{
+				"id": "00001",
+				"name": "员工1",
+				"loginname" : "2323",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 1
+			},
+			{
+				"id": "00002",
+				"name": "员工2",
+				"loginname" : "3455",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 0
+			},
+			{
+				"id": "00003",
+				"name": "员工3",
+				"loginname" : "7883",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 1
+			},
+			{
+				"id": "00004",
+				"name": "员工4",
+				"loginname" : "5611",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 0
+			}
+		],
+		"2" : [
+			{
+				"id": "00005",
+				"name": "员工5",
+				"loginname" : "2323",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 1
+			},
+			{
+				"id": "00006",
+				"name": "员工6",
+				"loginname" : "3455",
+				"creat_time" : "2016-6-20 14:20",
+				"use_state" : 0
+			}
+		]
+	}
+}

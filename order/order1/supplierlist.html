@@ -1,0 +1,105 @@
+<div class="padding">
+	<div class="box" ng-controller="supplierlistCtrl">
+		<div class="padding">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="btn-groups">
+						<button class="btn info btn-sm" ng-click="add_supplier()">添加</button>
+						<button class="btn white btn-sm" ng-click="edit_supplier()">修改</button>
+						<button class="btn white btn-sm" ng-click="delete_supplier()">删除</button>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-5">
+							<input type="text" class="form-control" ng-model="s_supplier.code" placeholder="请输入货主代码"/>
+						</div>
+						<div class="col-md-5">
+							<input type="text" class="form-control" ng-model="s_supplier.name" placeholder="请输入货主名称"/>
+						</div>
+						<div class="col-md-2">
+							<button class="btn white" ng-click="search_supplier(s_supplier)">查询</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="table-responsive fade-in-up m-t" ng-if="supplierlist">
+				<table class="table table-striped b-t b-b">
+					<thead>
+						<tr>
+							<th>
+								<label class="ui-check">
+									<input type="checkbox" ng-model="checkall" ng-click="checkallsupplier(checkall)">
+									<i class="dark-white"></i>
+								</label>
+							</th>
+							<th>序号</th>
+							<th>代码</th>
+							<th>名称</th>
+							<th>颜色</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in supplierlist" class="fade-in-up"ng-click="showsupplierdetail($event,item)" ng-class="item.suppliercheck ? 'orderchecked' : ''">
+							<td>
+								<label class="ui-check">
+									<input type="checkbox" name="suppliercheck" ng-model="item.suppliercheck" ng-click="checksupplier($event,item)">
+									<i class="dark-white"></i>
+								</label>
+							</td>
+							<td>{{$index+1}}</td>
+							<td>{{item.code}}</td>
+							<td>{{item.name}}</td>
+							<td>
+								<span class="btn m-r" ng-style="{'background-color':item.color}"></span>{{item.color}}
+							</td>
+							<td ng-if = "item.status == 1"><i class="fa fa-check-circle text-success text-lg"></i></td>
+							<td ng-if = "item.status == 0"><i class="fa fa-ban text-dark text-lg"></i></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr ng-controller="supplierlistpageCtrl">
+							<td colspan="6">
+								<div class="row">
+									<div class="col-md-6" style="line-height:40px;">
+										第 {{bigCurrentPage}} / {{numPages}} 页  每页{{pagesize}}条　共计 {{bigTotalItems}} 条
+									</div>
+									<div class="col-md-6">
+										<uib-pagination 
+											previous-text="上一页" 
+											next-text="下一页" 
+											first-text="首页" 
+											last-text="尾页" 
+											total-items="bigTotalItems" 
+											max-size="3" 
+											boundary-links="true" 
+											rotate="false" 
+											num-pages="numPages" 
+											items-per-page="pagesize"
+											ng-model="bigCurrentPage" 
+											class="pagination-sm m-t-none" 
+											style="margin:0;float:right;" 
+											ng-change="pageChanged(bigCurrentPage)">
+										</uib-pagination>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="fade-in-up" ng-if="!supplierlist">
+				<div class="p-a-lg text-center animated fadeInUp">
+					<span class="text-3x">
+					  <i class="fa fa-exclamation-circle text-2x text-warn"></i>
+					</span>
+					<h4 class="_300 text-muted">
+					   暂时没有供应商信息
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

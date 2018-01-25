@@ -1,0 +1,44 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title">修改节点</h6>
+  </div>
+   <form class="form-validation" name="myForm">
+	  <div class="modal-body">
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>名称</label>
+		  <div class="col-sm-10">
+			<input type="text" name="updatename" class="form-control" ng-model="updatename" required placeholder="请输入名称">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>电话</label>
+		  <div class="col-sm-10">
+			<input type="text" name="updatephone" class="form-control" ng-model="updatephone" required ng-pattern="/^1[3|4|5|7|8]\d{9}$/" placeholder="请输入电话">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>城市</label>
+		  <div class="col-sm-10">
+			<input type="text" name="updatecity" class="form-control" ng-model="updatecity" required placeholder="请输入城市">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">说明</label>
+		  <div class="col-sm-10">
+			<input type="text" name="updatetitle" class="form-control" ng-model="updatetitle" placeholder="请输入说明">
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	  $pristine 【没修改】：{{myForm.updatephone.$pristine }}<br/>
+            $dirty【修改过】：{{myForm.updatephone.$dirty}}<br/>
+            $invalid【验证失败】：{{myForm.updatephone.$invalid}}<br/>
+            $invalid【验证成功】：{{myForm.updatephone.$valid}}<br/>	  
+			表单<br/>
+			$pristine 【没修改】：{{myForm.$pristine}}<br/>
+            $dirty【修改过】：{{myForm.$dirty}}<br/>
+
+		<button type="button" class="btn dark-white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+		<button type="submit" class="btn danger p-x-md" ng-disabled="myForm.$invalid" ng-click="saveupdateNode(updatename,updatephone,updatecity,updatetitle)">保存</button>
+	  </div>
+</form>

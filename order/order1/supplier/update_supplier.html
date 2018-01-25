@@ -1,0 +1,57 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+	<h6 class="modal-title" ng-if="suppliertype == 'add'">新增供应商</h6>
+	<h6 class="modal-title" ng-if="suppliertype == 'edit'">编辑供应商</h6>
+</div>
+<form class="form-validation">
+	<div class="modal-body">
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>代码</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="supplier.code" required placeholder="请输入供应商代码" ng-pattern="/^\d+$/">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>名称</label>
+		  <div class="col-sm-10">
+			<input type="text" class="form-control" ng-model="supplier.name" required placeholder="请输入供应商名称">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>颜色</label>
+		  <div class="col-sm-10">
+			<input type="text" colorpicker colorpicker-size="130" class="form-control" ng-model="supplier.color" required placeholder="请输入供应商颜色" ng-pattern="/^#[0-9a-fA-F]{6}$/">
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label"><span class="text-danger">*</span>状态</label>
+		  <div class="col-sm-10">
+			<div class="radio-inline">
+				<label class="ui-check">
+					<input type="radio" name="supplier_status" ng-value="'1'" ng-model="supplier.status">
+					<i class="dark-white"></i>
+					启用
+				</label>
+			</div>
+			<div class="radio-inline">
+				<label class="ui-check">
+					<input type="radio" name="supplier_status" ng-value="'0'" ng-model="supplier.status">
+					<i class="dark-white"></i>
+					不启用
+				</label>
+			</div>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  <label class="col-sm-2 form-control-label">备注</label>
+		  <div class="col-sm-10">
+			<textarea class="form-control" ng-model="supplier.description" placeholder="备注"></textarea>
+		  </div>
+		</div>
+		
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn white p-x-md" style="margin-bottom:0;" ng-click="cancel()">取消</button>
+		<button type="submit" class="btn danger p-x-md" ng-click="saveSupplierdata(supplier,suppliertype)">保存</button>
+	</div>
+</form>

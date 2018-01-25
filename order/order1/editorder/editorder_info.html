@@ -1,0 +1,179 @@
+<form class="form-validation">
+	<h6 class="text-info p-t">订单主信息-------------</h6>
+	<div class="p-t">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>店铺名称</label>
+					<div class="col-sm-8">
+						<ui-select ng-model="seller_arr.obj" theme="bootstrap">
+							<ui-select-match placeholder="请选择...">{{$select.selected.name}}</ui-select-match>
+							<ui-select-choices  group-by="someGroupFn" repeat="item in seller_arr" style="max-height:140px;">
+								<div>
+									<span ng-bind-html="item.name" title="{{item.name}}" class="textellipsis ordershopname"></span>
+									<span ng-bind-html="item.typeName" title="{{item.typeName}}" class="textellipsis ordershoptypename"></span>
+								</div>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">平台单号</label>
+					<div class="col-sm-8">
+						<input type="number" class="form-control" ng-model="orderinfolist.platformCode" ng-pattern="/^[0-9]+$/">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>仓库名称</label>
+					<div class="col-sm-8">
+						<select class="form-control" ng-model="orderinfolist.warehouseId" ng-options="y.id as y.name for y in store_arr" required>
+							<option value="">-- 请选择 --</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">业务员</label>
+					<div class="col-sm-8">
+						<select class="form-control" ng-model="orderinfolist.businessManId" ng-options="y.id as y.name for y in business_arr">
+							<option value="">-- 请选择 --</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>物流公司</label>
+					<div class="col-sm-8">
+						<select class="form-control" ng-model="orderinfolist.expressId" ng-options="y.id as y.name for y in express_arr" required>
+							<option value="">-- 请选择 --</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">物流费用</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderinfolist.postFee" ng-pattern="/^\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?$/">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">卖家备注</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderinfolist.sellerMemo">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">货到付款</label>
+					<div class="col-sm-8">
+						<label class="ui-check" style="margin-top: 5px;">
+							<input type="checkbox" name="cod" ng-true-value="'true'" ng-false-value="'false'" ng-model="orderinfolist.cod">
+							<i class="dark-white"></i>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<h6 class="text-info p-t">订单其他信息-------------</h6>
+	<div class="p-t">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right"><span class="text-danger">*</span>拍单日期</label>
+					<div class="col-sm-8">
+						<input class="Wdate form-control" type="text" ng-model="orderinfolist.dealDate" datefmt = "yyyy-MM-dd HH:mm:ss" wdatepicker maxdate='%y-%M-%d %H:%m:%s' required>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">订单类型</label>
+					<div class="col-sm-8">
+						<select class="form-control" ng-model="orderinfolist.orderTypeId" ng-options="y.id as y.name for y in ordertype_arr">
+							<option value="">-- 请选择 --</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right" style="padding-left: 0;">预计发货时间</label>
+					<div class="col-sm-8">
+						<input class="Wdate form-control" type="text" ng-model="orderinfolist.planDeliveryDate" datefmt = "yyyy-MM-dd HH:mm:ss" wdatepicker mindate='%y-%M-%d %H:%m:%s'>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">到付服务费</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderinfolist.codFee" ng-pattern="/^\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?$/">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">让利金额</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" ng-model="orderinfolist.discountFee" ng-pattern="/^\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?$/">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group row">
+					<label class="col-sm-4 form-control-label text-right">淘宝家装</label>
+					<div class="col-sm-8">
+						<label class="ui-check" style="margin-top: 5px;">
+							<input type="checkbox" name="jz" ng-true-value="'true'" ng-false-value="'false'" ng-model="orderinfolist.jz">
+							<i class="dark-white"></i>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">买家留言</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="orderinfolist.buyerMemo">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">二次备注</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="orderinfolist.sellerMemoLate">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">附加信息</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" ng-model="orderinfolist.extendMemo">
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="btn-groups p-t" style="text-align:center;">
+		<button class="btn info m-l" ng-click="save_editborderinfo(orderinfolist,seller_arr.obj)">保存</button>
+	</div>
+</form>
